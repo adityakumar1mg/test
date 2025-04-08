@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata 1mg - India's Trusted Healthcare Platform</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00a5ec;
+            --primary-light: #4fc3f7;
+            --secondary: #ff6d00;
+            --dark: #263238;
+            --light: #f5f7fa;
+            --success: #4caf50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 120px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cta-buttons .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+
+        .btn-login {
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-signup {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 165, 236, 0.8), rgba(0, 165, 236, 0.9)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 20px auto 0;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 30px;
+            animation: fadeIn 1.4sease;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .trust-badge {
+            background: white;
+            color: var(--dark);
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.6s ease;
+        }
+
+        .trust-badge .stars {
+            color: var(--secondary);
+            margin-right: 8px;
+        }
+
+        /* Services Carousel */
+        .services-carousel {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .carousel-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: var(--dark);
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card {
+            min-width: 280px;
+            margin: 0 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-img {
+            height: 160px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 50px;
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .service-content p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .service-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .carousel-nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .carousel-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-dot.active {
+            background-color: var(--primary);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .benefit-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .about-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background-color: #e6f7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 32px;
+        }
+
+        .about-card h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-size: 24px;
+        }
+
+        .about-card p {
+            color: #666;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* Company Section */
+        .company-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .company-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .company-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .company-text h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .company-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .testimonials {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .testimonial-card {
+            min-width: 350px;
+            background: var(--light);
+            border-radius: 15px;
+            padding: 30px;
+            scroll-snap-align: start;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ddd;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* App Section */
+        .app-section {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .app-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .app-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .app-stores {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .app-store-btn {
+            display: inline-block;
+            width: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .tagline {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .company-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-card {
+                min-width: 240px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-card {
+                min-width: 280px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                min-width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt="Tata 1mg Logo" class="logo">
+                <ul class="nav-links">
+                    <li><a href="#">Medicines</a></li>
+                    <li><a href="#">Lab Tests</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Health Blogs</a></li>
+                    <li><a href="#">Plus</a></li>
+                    <li><a href="#">Offers</a></li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-login">Login</a>
+                    <a href="#" class="btn btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Health, Our Priority</h1>
+            <p>Order medicines, book lab tests, consult doctors, and get health advice—all in one trusted platform</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for medicines, health products and more...">
+                <button>Search</button>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Order Medicines Now</a>
+                <a href="#" class="btn btn-secondary">Consult a Doctor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Carousel -->
+    <section class="services-carousel">
+        <div class="container">
+            <h2 class="carousel-title">Healthcare Services</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <div class="service-card">
+                        <div class="service-img">🚑</div>
+                        <div class="service-content">
+                            <h3>24x7 Ambulance Service</h3>
+                            <p>Emergency ambulance services available across India with quick response time</p>
+                            <a href="#" class="service-btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">🏥</div>
+                        <div class="service-content">
+                            <h3>Partner Pharmacies</h3>
+                            <p>Network of 10,000+ trusted pharmacies across India for quick medicine delivery</p>
+                            <a href="#" class="service-btn">Find Pharmacy</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">💰</div>
+                        <div class="service-content">
+                            <h3>Exclusive Discounts</h3>
+                            <p>Get up to 30% off on medicines and health products with our coupons</p>
+                            <a href="#" class="service-btn">View Coupons</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">👨‍⚕️</div>
+                        <div class="service-content">
+                            <h3>Doctor Consultations</h3>
+                            <p>Talk to certified doctors online for all your health concerns</p>
+                            <a href="#" class="service-btn">Consult Now</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">🏠</div>
+                        <div class="service-content">
+                            <h3>Home Healthcare</h3>
+                            <p>Professional nursing care and medical equipment at home</p>
+                            <a href="#" class="service-btn">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">💉</div>
+                        <div class="service-content">
+                            <h3>Vaccination at Home</h3>
+                            <p>Get vaccinated in the comfort of your home by certified professionals</p>
+                            <a href="#" class="service-btn">Book Slot</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Complete Healthcare Solution</h2>
+                <p>We make healthcare accessible, affordable, and transparent for everyone</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💊</div>
+                    <h3>100% Genuine Medicines</h3>
+                    <p>Authentic medicines sourced directly from manufacturers with verified quality checks</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍⚕️</div>
+                    <h3>Expert Doctors</h3>
+                    <p>Consult with certified doctors online for all your health concerns</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔬</div>
+                    <h3>Accurate Lab Tests</h3>
+                    <p>Reliable diagnostic tests with home sample collection and online reports</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Commitment to Your Health</h2>
+                <p>At Tata 1mg, we're revolutionizing healthcare in India through technology and innovation</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>To make healthcare accessible, affordable, and transparent for a billion+ Indians through our
+                        technology-enabled platform.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">👁️</div>
+                    <h3>Our Vision</h3>
+                    <p>To build India's most trusted digital healthcare platform that empowers people to make better
+                        health decisions.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">❤️</div>
+                    <h3>Our Values</h3>
+                    <p><strong>Patient First:</strong> Your health is our priority<br>
+                        <strong>Integrity:</strong> Honest, transparent services<br>
+                        <strong>Innovation:</strong> Continuous improvement
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section class="company-section">
+        <div class="container">
+            <div class="company-content">
+                <div class="company-image">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Tata 1mg Team">
+                </div>
+                <div class="company-text">
+                    <h2>About Tata 1mg</h2>
+                    <p>Tata 1mg is India's leading digital healthcare platform, providing medicines, lab tests, doctor
+                        consultations, and health information. Acquired by Tata Digital in 2021, we're part of India's
+                        most trusted business group.</p>
+                    <p>Founded in 2015, we've grown to serve 15M+ customers across 1000+ cities with:</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">50M+</div>
+                            <div class="stat-label">Orders Delivered</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Partner Pharmacies</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">20K+</div>
+                            <div class="stat-label">Verified Doctors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted by Millions</h2>
+                <p>Join India's fastest growing healthcare community</p>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Tata 1mg saved me during lockdown when I needed medicines for my
+                        mother. Delivery was prompt and medicines were genuine."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Rahul Sharma</h4>
+                            <p>New Delhi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The doctor consultation feature is a lifesaver! Got expert advice
+                        without leaving home during my pregnancy."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Lab tests at home with online reports made my annual health checkup so
+                        convenient. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Arjun Mehta</h4>
+                            <p>Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20K+</div>
+                    <div class="stat-label">Verified Doctors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1K+</div>
+                    <div class="stat-label">Diagnostic Centers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1K+</div>
+                    <div class="stat-label">Cities Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section class="app-section">
+        <div class="container">
+            <div class="app-content">
+                <h2>Experience Seamless Healthcare</h2>
+                <p>Download the Tata 1mg app today and get exclusive benefits</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Order Medicines</a></li>
+                        <li><a href="#">Book Lab Tests</a></li>
+                        <li><a href="#">Doctor Consultations</a></li>
+                        <li><a href="#">Healthcare Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">TW</a>
+                        <a href="#">IG</a>
+                        <a href="#">LI</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 Tata 1mg. All Rights Reserved.
+            </div>
+            <div class="tagline">
+                Healthcare at your fingertips
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const slide = document.querySelector('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const cards = document.querySelectorAll('.service-card');
+            let currentIndex = 0;
+            const cardCount = cards.length;
+            const visibleCards = 3;
+            const cardWidth = 310;
+
+            for (let i = 0; i < visibleCards; i++) {
+                const clone = cards[i].cloneNode(true);
+                slide.appendChild(clone);
+            }
+
+            function updateCarousel(animate = true) {
+                const offset = -currentIndex * cardWidth;
+                if (animate) {
+                    slide.style.transition = 'transform 0.5s ease';
+                } else {
+                    slide.style.transition = 'none';
+                }
+                slide.style.transform = `translateX(${offset}px)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === Math.floor(currentIndex % (cardCount / visibleCards)));
+                });
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index * visibleCards;
+                    updateCarousel();
+                });
+            });
+
+            setInterval(() => {
+                currentIndex++;
+                if (currentIndex >= cardCount) {
+                    currentIndex = 0;
+                    updateCarousel(false);
+                    void slide.offsetWidth;
+                }
+                updateCarousel();
+            }, 3000);
+
+            window.addEventListener('resize', function () {
+                updateCarousel(false);
+            });
+        });
+    </script>
+</body>
+
+</html>
